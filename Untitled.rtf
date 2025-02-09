@@ -1,0 +1,65 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2821
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="en">\
+<head>\
+    <meta charset="UTF-8">\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <title>Gift Surprise</title>\
+    <style>\
+        body \{\
+            display: flex;\
+            justify-content: center;\
+            align-items: center;\
+            height: 100vh;\
+            background-color: #f8e8c8;\
+            flex-direction: column;\
+            font-family: Arial, sans-serif;\
+        \}\
+        #giftBox \{\
+            width: 150px;\
+            cursor: pointer;\
+            transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;\
+        \}\
+        #message, #chocolateImage \{\
+            display: none;\
+            text-align: center;\
+            margin-top: 20px;\
+            font-size: 20px;\
+            font-weight: bold;\
+        \}\
+        #chocolateImage \{\
+            width: 200px;\
+            margin-top: 10px;\
+        \}\
+        .open-animation \{\
+            transform: scale(1.2) rotateX(180deg);\
+            opacity: 0;\
+        \}\
+    </style>\
+</head>\
+<body>\
+    <h2>Click the gift box to reveal your surprise!</h2>\
+    <img id="giftBox" src="https://cdn-icons-png.flaticon.com/512/1387/1387940.png" alt="Gift Box">\
+    <div id="message">Will you be my Valentine? \uc0\u10084 \u65039 </div>\
+    <img id="chocolateImage" src="https://www.bigbasket.com/pd/267377/cadbury-dairy-milk-fruit-nut-chocolate-bar-80-g/" alt="Chocolate">\
+    \
+    <script>\
+        document.getElementById("giftBox").addEventListener("click", function() \{\
+            let giftBox = document.getElementById("giftBox");\
+            giftBox.classList.add("open-animation");\
+            setTimeout(() => \{\
+                giftBox.style.display = "none";\
+                document.getElementById("message").style.display = "block";\
+                document.getElementById("chocolateImage").style.display = "block";\
+            \}, 500);\
+        \});\
+    </script>\
+</body>\
+</html>\
+}
